@@ -17,9 +17,6 @@ BuildRequires:	xorg-proto-dmxproto-devel
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
-
 %description
 dmx library.
 
