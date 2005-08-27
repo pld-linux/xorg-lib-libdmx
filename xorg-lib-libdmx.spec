@@ -1,5 +1,3 @@
-# $Rev: 3328 $, $Date: 2005-08-27 17:42:48 $
-#
 Summary:	dmx library
 Summary(pl):	Biblioteka dmx
 Name:		xorg-lib-libdmx
@@ -12,12 +10,12 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libdmx-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-proto-dmxproto-devel
-BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-proto-dmxproto-devel
 BuildRequires:	xorg-util-util-macros
-BuildRoot:	%{tmpdir}/libdmx-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -28,14 +26,13 @@ dmx library.
 %description -l pl
 Biblioteka dmx.
 
-
 %package devel
 Summary:	Header files libdmx development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libdmx
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libdmx = %{version}-%{release}
-Requires:	xorg-proto-dmxproto-devel
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
+Requires:	xorg-proto-dmxproto-devel
 
 %description devel
 dmx library.
@@ -49,12 +46,11 @@ Biblioteka dmx.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libdmx.
 
-
 %package static
-Summary:	Static libdmx libraries
-Summary(pl):	Biblioteki statyczne libdmx
-Group:		Development/Libraries
-Requires:	xorg-lib-libdmx-devel = %{version}-%{release}
+Summary:	Static libdmx library
+Summary(pl):	Biblioteka statyczna libdmx
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 dmx library.
@@ -64,12 +60,10 @@ This package contains the static libdmx library.
 %description static -l pl
 Biblioteka dmx.
 
-Pakiet zawiera statyczn± biblioteke libdmx.
-
+Pakiet zawiera statyczn± bibliotekê libdmx.
 
 %prep
 %setup -q -n libdmx-%{version}
-
 
 %build
 %{__libtoolize}
@@ -81,7 +75,6 @@ Pakiet zawiera statyczn± biblioteke libdmx.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -89,28 +82,23 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,wheel) %{_libdir}/libdmx.so.*
-
+%attr(755,root,root) %{_libdir}/libdmx.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libdmx.so
 %{_libdir}/libdmx.la
-%attr(755,root,wheel) %{_libdir}/libdmx.so
 %{_pkgconfigdir}/dmx.pc
 %{_mandir}/man3/*.3*
-
 
 %files static
 %defattr(644,root,root,755)
