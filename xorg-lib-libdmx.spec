@@ -1,12 +1,12 @@
 Summary:	dmx library
 Summary(pl):	Biblioteka dmx
 Name:		xorg-lib-libdmx
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libdmx-%{version}.tar.bz2
-# Source0-md5:	3d106702148d8a40f46e53448ac8b722
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libdmx-%{version}.tar.bz2
+# Source0-md5:	f470296629b6627bcc6d4c9e3517ab08
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-dmxproto-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libdmx.so
 %{_libdir}/libdmx.la
 %{_pkgconfigdir}/dmx.pc
-%{_mandir}/man3/*.3*
+%{_mandir}/man3/*.3x*
 
 %files static
 %defattr(644,root,root,755)
