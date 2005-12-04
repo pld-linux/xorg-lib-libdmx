@@ -24,8 +24,8 @@ dmx library.
 Biblioteka dmx.
 
 %package devel
-Summary:	Header files libdmx development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libdmx
+Summary:	Header files for libdmx library
+Summary(pl):	Pliki nag³ówkowe biblioteki libdmx
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -35,7 +35,7 @@ Requires:	xorg-proto-dmxproto-devel
 dmx library.
 
 This package contains the header files needed to develop programs that
-use these libdmx.
+use libdmx.
 
 %description devel -l pl
 Biblioteka dmx.
