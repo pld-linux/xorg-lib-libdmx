@@ -1,5 +1,5 @@
 Summary:	dmx library
-Summary(pl.UTF-8):   Biblioteka dmx
+Summary(pl.UTF-8):	Biblioteka dmx
 Name:		xorg-lib-libdmx
 Version:	1.0.2
 Release:	3
@@ -25,7 +25,7 @@ Biblioteka dmx.
 
 %package devel
 Summary:	Header files for libdmx library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libdmx
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdmx
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -45,7 +45,7 @@ używających biblioteki libdmx.
 
 %package static
 Summary:	Static libdmx library
-Summary(pl.UTF-8):   Biblioteka statyczna libdmx
+Summary(pl.UTF-8):	Biblioteka statyczna libdmx
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
