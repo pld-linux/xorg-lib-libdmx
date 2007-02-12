@@ -1,5 +1,5 @@
 Summary:	dmx library
-Summary(pl):	Biblioteka dmx
+Summary(pl.UTF-8):   Biblioteka dmx
 Name:		xorg-lib-libdmx
 Version:	1.0.2
 Release:	3
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 dmx library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka dmx.
 
 %package devel
 Summary:	Header files for libdmx library
-Summary(pl):	Pliki nag³ówkowe biblioteki libdmx
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libdmx
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,15 +37,15 @@ dmx library.
 This package contains the header files needed to develop programs that
 use libdmx.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka dmx.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libdmx.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libdmx.
 
 %package static
 Summary:	Static libdmx library
-Summary(pl):	Biblioteka statyczna libdmx
+Summary(pl.UTF-8):   Biblioteka statyczna libdmx
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,10 +54,10 @@ dmx library.
 
 This package contains the static libdmx library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka dmx.
 
-Pakiet zawiera statyczn± bibliotekê libdmx.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libdmx.
 
 %prep
 %setup -q -n libdmx-%{version}
