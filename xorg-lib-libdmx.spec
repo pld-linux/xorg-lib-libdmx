@@ -1,12 +1,12 @@
 Summary:	dmx library
 Summary(pl.UTF-8):	Biblioteka dmx
 Name:		xorg-lib-libdmx
-Version:	1.0.99.1
+Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libdmx-%{version}.tar.bz2
-# Source0-md5:	cd8d5777a4ac53e06573c4bde178621e
+# Source0-md5:	a2fcf0382837888d3781b714489a8999
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
