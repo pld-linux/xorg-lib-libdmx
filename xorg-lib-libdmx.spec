@@ -1,5 +1,5 @@
-Summary:	dmx library
-Summary(pl.UTF-8):	Biblioteka dmx
+Summary:	DMX extension library
+Summary(pl.UTF-8):	Biblioteka rozszerzenia DMX
 Name:		xorg-lib-libdmx
 Version:	1.1.0
 Release:	1
@@ -14,14 +14,14 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-dmxproto-devel >= 2.2.99.1
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-dmx library.
+DMX (Distributed Multihead X) extension library.
 
 %description -l pl.UTF-8
-Biblioteka dmx.
+Biblioteka rozszerzenia DMX (Distributed Multihead X).
 
 %package devel
 Summary:	Header files for libdmx library
@@ -29,16 +29,16 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdmx
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
-Requires:	xorg-proto-dmxproto-devel
+Requires:	xorg-proto-dmxproto-devel >= 2.2.99.1
 
 %description devel
-dmx library.
+DMX (Distributed Multihead X) extension library.
 
 This package contains the header files needed to develop programs that
 use libdmx.
 
 %description devel -l pl.UTF-8
-Biblioteka dmx.
+Biblioteka rozszerzenia DMX (Distributed Multihead X).
 
 Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libdmx.
@@ -50,12 +50,12 @@ Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-dmx library.
+DMX (Distributed Multihead X) extension library.
 
 This package contains the static libdmx library.
 
 %description static -l pl.UTF-8
-Biblioteka dmx.
+Biblioteka rozszerzenia DMX (Distributed Multihead X).
 
 Pakiet zawiera statyczną bibliotekę libdmx.
 
@@ -87,16 +87,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libdmx.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdmx.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libdmx.so
 %{_libdir}/libdmx.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/dmxext.h
 %{_pkgconfigdir}/dmx.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/DMX*.3x*
 
 %files static
 %defattr(644,root,root,755)
