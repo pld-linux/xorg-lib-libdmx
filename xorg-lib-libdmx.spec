@@ -1,12 +1,12 @@
 Summary:	DMX extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia DMX
 Name:		xorg-lib-libdmx
-Version:	1.1.1
-Release:	2
+Version:	1.1.2
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libdmx-%{version}.tar.bz2
-# Source0-md5:	75fd328fab3bd4a55cccaa6d5dfff749
+# Source0-md5:	782ced3a9e754dfeb53a8a006a75eb1a
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
