@@ -2,7 +2,7 @@ Summary:	DMX extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia DMX
 Name:		xorg-lib-libdmx
 Version:	1.1.3
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libdmx-%{version}.tar.bz2
@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libdmx.so
 %{_includedir}/X11/extensions/dmxext.h
 %{_pkgconfigdir}/dmx.pc
-%{_mandir}/man3/DMX*.3x*
+%{_mandir}/man3/DMX*.3*
 
 %files static
 %defattr(644,root,root,755)
