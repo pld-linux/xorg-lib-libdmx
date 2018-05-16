@@ -1,20 +1,23 @@
 Summary:	DMX extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia DMX
 Name:		xorg-lib-libdmx
-Version:	1.1.3
-Release:	3
+Version:	1.1.4
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libdmx-%{version}.tar.bz2
-# Source0-md5:	ba983eba5a9f05d152a0725b8e863151
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libdmx-%{version}.tar.bz2
+# Source0-md5:	d2f1f0ec68ac3932dd7f1d9aa0a7a11c
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-dmxproto-devel >= 2.2.99.1
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+Requires:	xorg-lib-libX11 >= 1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,6 +31,7 @@ Summary:	Header files for libdmx library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdmx
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-dmxproto-devel >= 2.2.99.1
 
