@@ -1,22 +1,24 @@
 Summary:	DMX extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia DMX
 Name:		xorg-lib-libdmx
-Version:	1.1.4
+Version:	1.1.5
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libdmx-%{version}.tar.bz2
-# Source0-md5:	d2f1f0ec68ac3932dd7f1d9aa0a7a11c
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libdmx-%{version}.tar.xz
+# Source0-md5:	ca5b5017987d2eee289485b54506ff5c
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-dmxproto-devel >= 2.2.99.1
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -92,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libdmx.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libdmx.so.1
 
